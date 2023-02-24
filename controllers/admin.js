@@ -8,7 +8,7 @@ exports.getAddProduct = (req, res, next) => {
 };
 
 exports.getProducts = (req, res, next) => {
-  const products = Product.fetchAll((products) => {
+  Product.fetchAll((products) => {
     res.render("admin/products", {
       prods: products,
       pageTitle: "Admin Products",
